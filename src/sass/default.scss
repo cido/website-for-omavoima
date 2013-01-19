@@ -1,0 +1,54 @@
+
+/* ==========================================================================
+ * VISUALIZATION OPTIONS
+ */
+
+$display-baseline-grid-visualizer:  false;
+$display-element-background-colors: false;
+
+/* ==========================================================================
+ * TYPOGRAPHIC CONFIGURATIONS
+ */
+
+$body-text-size: 18px;
+$body-line-height: 34px;
+
+$body-text-font-family: Constantia, Palatino Linotype, Book Antiqua, Palatino, serif;
+$body-text-font-weight: normal;
+
+$header-1-text-size: 72px;    $header-1-line-height-factor: 2;   $header-1-margin-top-factor: 3;
+$header-2-text-size: 48px;    $header-2-line-height-factor: 1;   $header-2-margin-top-factor: 2;
+$header-3-text-size: 36px;    $header-3-line-height-factor: 1;   $header-3-margin-top-factor: 1;
+$header-4-text-size: 28px;    $header-4-line-height-factor: 1;   $header-4-margin-top-factor: 1;
+$header-5-text-size: 26px;    $header-5-line-height-factor: 1;   $header-5-margin-top-factor: 1;
+$header-6-text-size: 24px;    $header-6-line-height-factor: 1;   $header-6-margin-top-factor: 1;
+
+$header-font-family: 'CapsuulaRegular', Arial, sans-serif;
+$header-font-weight: normal;
+
+
+/* ==========================================================================
+ * ALL THE MAGIC
+ */
+
+@import 'normalize';
+@import 'font-faces';
+@import 'font-sizes';
+@import 'baseline-grid-visualizer';
+
+$default-font-size: 16px;
+
+body {
+
+	margin: 0 23%;
+
+	font-family: $body-text-font-family;
+	font-weight: $body-text-font-weight;
+
+	#{headers()} {
+		font-family: $header-font-family;
+		font-weight: $header-font-weight;
+	}
+
+}
+
