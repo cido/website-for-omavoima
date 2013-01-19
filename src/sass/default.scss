@@ -1,4 +1,6 @@
-$just-the-column-limit: 950px;
+$base-font-size: 16px;
+$max-column-width: (950px / $base-font-size) * 1em;
+$column-margin: 1em;
 
 body {
 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
@@ -6,23 +8,33 @@ body {
 }
 
 #container {
-	background-color: white;
+	background-color: #f2f2f2;
 	width: inherit;
 	margin: 0 auto;
 }
 
-@media screen and (min-width: $just-the-column-limit),
+@media screen and (min-width: $max-column-width),
        screen and (min-device-width: 768px) and (max-device-width: 768px) and (orientation: landscape) {
 	body {
 		background-image: image-url('wood-floor.jpg');
 	}
 	#container {
-		width: $just-the-column-limit;
+		width: $max-column-width;
+	}
+}
+
+@media screen and (min-width: $max-column-width + 2em),
+       screen and (min-device-width: 768px) and (max-device-width: 768px) and (orientation: landscape) {
+    #container {
+		padding-left: $column-margin;
+		padding-right: $column-margin;
+		padding-bottom: $column-margin;
 	}
 }
 
 header {
 
+	background-color: white;
 	position: relative;
 	text-align: center;
 
@@ -57,4 +69,8 @@ header {
 	&.testing-area {
 		visibility: hidden;
 	}
+}
+
+section {
+	background-color: white;
 }

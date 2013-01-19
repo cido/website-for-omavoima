@@ -1,43 +1,52 @@
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jouni_000\/Projektit\/omavoiman-kotisivut\/src\/sass\/default\.scss}line{font-family:\000033}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jouni_000\/Projektit\/omavoiman-kotisivut\/src\/sass\/default\.scss}line{font-family:\000035}}
 body {
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   margin: 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jouni_000\/Projektit\/omavoiman-kotisivut\/src\/sass\/default\.scss}line{font-family:\000038}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jouni_000\/Projektit\/omavoiman-kotisivut\/src\/sass\/default\.scss}line{font-family:\0000310}}
 #container {
-  background-color: white;
+  background-color: #f2f2f2;
   width: inherit;
   margin: 0 auto;
 }
 
-@media screen and (min-width: 950px), screen and (min-device-width: 768px) and (max-device-width: 768px) and (orientation: landscape) {
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jouni_000\/Projektit\/omavoiman-kotisivut\/src\/sass\/default\.scss}line{font-family:\0000316}}
+@media screen and (min-width: 59.375em), screen and (min-device-width: 768px) and (max-device-width: 768px) and (orientation: landscape) {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jouni_000\/Projektit\/omavoiman-kotisivut\/src\/sass\/default\.scss}line{font-family:\0000318}}
   body {
     background-image: url('../images/wood-floor.jpg?1358631873');
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jouni_000\/Projektit\/omavoiman-kotisivut\/src\/sass\/default\.scss}line{font-family:\0000319}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jouni_000\/Projektit\/omavoiman-kotisivut\/src\/sass\/default\.scss}line{font-family:\0000321}}
   #container {
-    width: 950px;
+    width: 59.375em;
   }
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jouni_000\/Projektit\/omavoiman-kotisivut\/src\/sass\/default\.scss}line{font-family:\0000324}}
+@media screen and (min-width: 61.375em), screen and (min-device-width: 768px) and (max-device-width: 768px) and (orientation: landscape) {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jouni_000\/Projektit\/omavoiman-kotisivut\/src\/sass\/default\.scss}line{font-family:\0000328}}
+  #container {
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-bottom: 1em;
+  }
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jouni_000\/Projektit\/omavoiman-kotisivut\/src\/sass\/default\.scss}line{font-family:\0000335}}
 header {
+  background-color: white;
   position: relative;
   text-align: center;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jouni_000\/Projektit\/omavoiman-kotisivut\/src\/sass\/default\.scss}line{font-family:\0000329}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jouni_000\/Projektit\/omavoiman-kotisivut\/src\/sass\/default\.scss}line{font-family:\0000341}}
 header #keys {
   width: 100%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jouni_000\/Projektit\/omavoiman-kotisivut\/src\/sass\/default\.scss}line{font-family:\0000333}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jouni_000\/Projektit\/omavoiman-kotisivut\/src\/sass\/default\.scss}line{font-family:\0000345}}
 header #logo {
   width: 100%;
   margin-top: -6.5%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jouni_000\/Projektit\/omavoiman-kotisivut\/src\/sass\/default\.scss}line{font-family:\0000340}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jouni_000\/Projektit\/omavoiman-kotisivut\/src\/sass\/default\.scss}line{font-family:\0000352}}
 .slogan {
   font-size: 1.1em;
   font-style: italic;
@@ -45,7 +54,7 @@ header #logo {
   text-align: center;
   margin-top: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jouni_000\/Projektit\/omavoiman-kotisivut\/src\/sass\/default\.scss}line{font-family:\0000347}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jouni_000\/Projektit\/omavoiman-kotisivut\/src\/sass\/default\.scss}line{font-family:\0000359}}
 .slogan.aligned {
   display: block;
   margin: 0;
@@ -55,7 +64,12 @@ header #logo {
   bottom: 0;
   z-index: 10;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jouni_000\/Projektit\/omavoiman-kotisivut\/src\/sass\/default\.scss}line{font-family:\0000357}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jouni_000\/Projektit\/omavoiman-kotisivut\/src\/sass\/default\.scss}line{font-family:\0000369}}
 .slogan.testing-area {
   visibility: hidden;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jouni_000\/Projektit\/omavoiman-kotisivut\/src\/sass\/default\.scss}line{font-family:\0000374}}
+section {
+  background-color: white;
 }
