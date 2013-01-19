@@ -1,3 +1,56 @@
+$just-the-column-limit: 950px;
+$logo-width: 85%;
+
 body {
-	background-color: yellow;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	margin-top: 0;
+}
+
+#container {
+	background-color: white;
+	width: 100%;
+	margin: 0 auto;
+}
+
+@media screen and (min-device-width: $just-the-column-limit),
+       screen and (max-device-width: 1024px) and (orientation: landscape) {
+	body {
+		background-image: url('../images/wood-floor.png');
+	}
+	#container {
+		width: $just-the-column-limit;
+	}
+}
+
+header {
+
+	position: relative;
+	text-align: center;
+
+	#logo {
+		width: $logo-width;
+	}
+
+}
+
+.slogan {
+	font-size: 1.1em;
+	font-style: italic;
+	font-weight: bold;
+	text-align: center;
+	margin-top: 0;
+
+	&.aligned {
+		display: block;
+		margin: 0;
+		position: absolute;
+		left: 50%;
+		right: (100% - $logo-width) / 2;
+		bottom: 0;
+		z-index: 10;
+	}
+
+	&.testing-area {
+		visibility: hidden;
+	}
 }
