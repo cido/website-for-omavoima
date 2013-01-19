@@ -1,21 +1,20 @@
 $just-the-column-limit: 950px;
-$logo-width: 85%;
 
 body {
 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-	margin-top: 0;
+	margin: 0;
 }
 
 #container {
 	background-color: white;
-	width: 100%;
+	width: inherit;
 	margin: 0 auto;
 }
 
-@media screen and (min-device-width: $just-the-column-limit),
-       screen and (max-device-width: 1024px) and (orientation: landscape) {
+@media screen and (min-width: $just-the-column-limit),
+       screen and (min-device-width: 768px) and (max-device-width: 768px) and (orientation: landscape) {
 	body {
-		background-image: url('../images/wood-floor.png');
+		background-image: image-url('wood-floor.jpg');
 	}
 	#container {
 		width: $just-the-column-limit;
@@ -27,8 +26,13 @@ header {
 	position: relative;
 	text-align: center;
 
+	#keys {
+		width: 100%;
+	}
+
 	#logo {
-		width: $logo-width;
+		width: 100%;
+		margin-top: -6.5%; // trial end error...
 	}
 
 }
@@ -44,8 +48,8 @@ header {
 		display: block;
 		margin: 0;
 		position: absolute;
-		left: 50%;
-		right: (100% - $logo-width) / 2;
+		left: 51%;
+		right: 3%;
 		bottom: 0;
 		z-index: 10;
 	}

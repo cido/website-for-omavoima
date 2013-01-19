@@ -9,8 +9,8 @@
 			var slogan = document.getElementById('slogan');
 			var sloganTestingArea = this._addSloganTestingArea(slogan);
 
-			if (this._supportsSvg()) {
-				logo.setAttribute('src', logo.getAttribute('data-vector-src'));
+			if (this._supportsSvg() === false) {
+				logo.setAttribute('src', logo.getAttribute('data-fallback-src'));
 			}
 
 			var listener = function () { self._onResize(logo, slogan, sloganTestingArea); };
@@ -29,7 +29,7 @@
 
 		_onResize: function (logo, slogan, testingArea) {
 			if (logo.offsetWidth !== 0 && testingArea.offsetWidth !== 0) {
-				var showAligned = (logo.offsetWidth * 0.5 >= testingArea.offsetWidth);
+				var showAligned = (logo.offsetWidth * 0.46 >= testingArea.offsetWidth);
 				var newClassName = (showAligned ? 'slogan aligned' : 'slogan');
 				if (slogan.className !== newClassName) {
 					slogan.className = newClassName;
