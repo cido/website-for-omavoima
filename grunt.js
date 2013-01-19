@@ -9,7 +9,7 @@ module.exports = function(grunt) {
         watch: {
             css: {
                 files: [ 'src/sass/*.scss' ],
-                tasks: [ 'compass:development' ]
+                tasks: [ 'compass:development', 'compass:production' ]
             }
         },
 
@@ -22,6 +22,16 @@ module.exports = function(grunt) {
                 debugsass: true,
                 images: 'src/images',
                 relativeassets: true
+            },
+            production: {
+                src: 'src/sass',
+                dest: 'src/css-for-production',
+                outputstyle: 'compressed',
+                linecomments: false,
+                forcecompile: true,
+                debugsass: false,
+                images: 'src/images',
+                relativeassets: true
             }
         }
 
@@ -29,7 +39,7 @@ module.exports = function(grunt) {
 
     // Watch -> Compile everything first and start watching for additional changes after that
     grunt.renameTask('watch', 'watchForChanges');
-    grunt.registerTask('watch', 'compass:development watchForChanges');
+    grunt.registerTask('watch', 'compass:development compass:production watchForChanges');
 
-    grunt.registerTask('default', 'compass:development');
+    grunt.registerTask('default', 'compass:development compass:production');
 };
