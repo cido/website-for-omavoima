@@ -15,9 +15,8 @@
 				logo.setAttribute('src', logo.getAttribute('data-fallback-src'));
 			}
 
-			//var listener = function () { self._onResize(logo, slogan, sloganTestingArea); };
-			//window.addEventListener('resize', listener);
-			//listener();
+			window.addEventListener('resize', this._initializeFacebookLikeBox.bind(this));
+			this._initializeFacebookLikeBox();
 
 		},
 
@@ -65,8 +64,24 @@
 
 		_capitaliseFirstLetter: function(str) {
 			return str.charAt(0).toUpperCase() + str.slice(1);
-		}
+		},
 
+		_likeBoxInitialized: false,
+		_initializeFacebookLikeBox: function () {
+			if (this._likeBoxInitialized === false) {
+
+				var d = document;
+				var s = 'script';
+				var id = 'facebook-jssdk';
+				var js, fjs = d.getElementsByTagName(s)[0];
+				if (d.getElementById(id)) return;
+				js = d.createElement(s); js.id = id;
+				js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&appId=216895838369307";
+				fjs.parentNode.insertBefore(js, fjs);
+				this._likeBoxInitialized = true;
+
+			}
+		}
 	};
 
 	page.initialize();

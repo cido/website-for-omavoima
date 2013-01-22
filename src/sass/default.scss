@@ -1,5 +1,6 @@
 @import "compass/css3/box-shadow";
 @import "normalize";
+@import "fb-like-box";
 
 $base-font-size: 16px;
 $real-font-size: (18px / $base-font-size) * 1em;
@@ -126,7 +127,7 @@ section {
 		color: #952230;
 		text-transform: uppercase;
 		-webkit-font-smoothing: antialiased;
-		
+
 		&:first-child {
 			margin-top: 1em;
 		}
