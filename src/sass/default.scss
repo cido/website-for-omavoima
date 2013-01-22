@@ -1,42 +1,51 @@
+@import "compass/css3/box-shadow";
+@import "normalize";
+
 $base-font-size: 16px;
+$real-font-size: (18px / $base-font-size) * 1em;
 $max-column-width: (950px / $base-font-size) * 1em;
+$sidebar-visible-after-width: (860px / $base-font-size) * 1em;
+$main-column-width: 72%;
+$sidebar-width: 25%;
+$mobile-column-width: 320px;
 $column-margin: 1em;
+
+$block-border-color: #dddddd;
+
+html {
+	font-size: $base-font-size;
+}
 
 body {
 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-	margin: 0;
+	line-height: 26px;
 }
 
 #container {
-	background-color: #f2f2f2;
-	width: inherit;
+	//background-color: $container-border-color;
+	width: 100%;
+	max-width: $max-column-width;
 	margin: 0 auto;
-}
 
-@media screen and (min-width: $max-column-width),
-       screen and (min-device-width: 768px) and (max-device-width: 768px) and (orientation: landscape) {
-	body {
-		background-image: image-url('wood-floor.jpg');
-	}
-	#container {
-		width: $max-column-width;
+	aside {
+		display: none;
 	}
 }
 
-@media screen and (min-width: $max-column-width + 2em),
-       screen and (min-device-width: 768px) and (max-device-width: 768px) and (orientation: landscape) {
-    #container {
-		padding-left: $column-margin;
-		padding-right: $column-margin;
-		padding-bottom: $column-margin;
-	}
+.block {
+	background-color: white;
+	padding: 0 4.5%;
+	margin: 0 0 0.5em 0;
 }
 
 header {
-
 	background-color: white;
 	position: relative;
 	text-align: center;
+
+	&.block {
+		padding: 0;
+	}
 
 	#keys {
 		width: 100%;
@@ -47,30 +56,56 @@ header {
 		margin-top: -6.5%; // trial end error...
 	}
 
+	#slogan {
+		font-size: 1em;
+		font-style: italic;
+		font-weight: normal;
+		text-align: center;
+		-webkit-font-smoothing: antialiased;
+		margin: 0;
+		padding: 0 0.5em 0.5em 0.5em;
+	}
 }
 
-.slogan {
-	font-size: 1.1em;
-	font-style: italic;
-	font-weight: bold;
-	text-align: center;
-	margin-top: 0;
-
-	&.aligned {
-		display: block;
+@media screen and (min-width: $mobile-column-width) {
+	body {
+		background-image: image-url('wood-floor.jpg');
+		font-size: $real-font-size;
+	}
+	#container {
+		width: 96%;
+	}
+	header {
 		margin: 0;
-		position: absolute;
-		left: 51%;
-		right: 3%;
-		bottom: 0;
-		z-index: 10;
+		#slogan {
+			font-size: 1.2em;
+		}
+	}
+	.block {
+		margin: 0 0 1em 0;
+		border: 1px solid $block-border-color;
+
+		.box-shadow & {
+			border: none;
+			@include box-shadow(0 0 3px 2px $block-border-color);
+		}
+	}
+}
+
+@media screen and (min-width: $sidebar-visible-after-width) {
+
+	#container {
+		#main-content {
+			margin-right: 100% - $main-column-width;
+		}
+		aside {
+			display: block;
+			float: right;
+			width: $sidebar-width;
+		}
 	}
 
-	&.testing-area {
-		visibility: hidden;
-	}
 }
 
 section {
-	background-color: white;
 }
