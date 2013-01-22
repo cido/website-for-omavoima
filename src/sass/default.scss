@@ -30,11 +30,14 @@ body {
 	aside {
 		display: none;
 	}
+	#main-content {
+		width: 96%;
+		margin: 0 auto;
+	}
 }
 
 .block {
 	background-color: white;
-	padding: 0 4.5%;
 	margin: 0 0 0.5em 0;
 }
 
@@ -42,10 +45,6 @@ header {
 	background-color: white;
 	position: relative;
 	text-align: center;
-
-	&.block {
-		padding: 0;
-	}
 
 	#keys {
 		width: 100%;
@@ -74,9 +73,14 @@ header {
 	}
 	#container {
 		width: 96%;
+		#main-content {
+			width: 100%;
+		}
 	}
 	header {
-		margin: 0;
+		&.block {
+			margin: 1em 0;
+		}
 		#slogan {
 			font-size: 1.2em;
 		}
@@ -90,12 +94,16 @@ header {
 			@include box-shadow(0 0 3px 2px $block-border-color);
 		}
 	}
+	section {
+		padding: 2em;
+	}
 }
 
 @media screen and (min-width: $sidebar-visible-after-width) {
 
 	#container {
 		#main-content {
+			width: auto;
 			margin-right: 100% - $main-column-width;
 		}
 		aside {
@@ -108,4 +116,11 @@ header {
 }
 
 section {
+
+	h3, h4, h5, h6 {
+		margin-top: 2em;
+		&:first-child {
+			margin-top: 1em;
+		}
+	}
 }
