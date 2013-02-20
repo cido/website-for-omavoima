@@ -131,7 +131,7 @@ nav {
 	padding: 0.5em 0;
 }
 
-h3, h4, h5, h6, .navigation-link {
+h3, h4, h5, h6, nav {
 	font-family: "Calibri", $normal-font-family;
 	font-weight: bold;
 	color: $deep-red-color;
@@ -148,14 +148,30 @@ h3, h4, h5, h6 {
 	}
 }
 
-.navigation-link {
-	font-size: 1.1em;
-	padding: 0 5px;
-	margin: 0 0.5em;
-	text-decoration: none;
-	border-bottom: 0.1em solid silver;
+nav ul {
+	margin: 0.4em 0;
+	li {
+		display: inline;
+		list-style-type: none;
+		font-size: 1.1em;
+		padding: 0 5px;
+		margin: 0 0.5em;
+		border-bottom: 0.1em solid silver;
 
-	&.selected, &:hover {
-		border-bottom: 0.2em solid $deep-red-color;
+		a, a:link, a:active, a:visited, a:hover {
+			text-decoration: none;
+		}
+
+		&.current, &:hover {
+			border-bottom: 0.2em solid $deep-red-color;
+		}
 	}
+}
+
+a, a:link, a:active, a:visited, a:hover {
+	color: $deep-red-color;
+}
+a:active {
+	position: relative;
+	top: 2px;
 }

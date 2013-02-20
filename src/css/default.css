@@ -565,7 +565,7 @@ nav {
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jouni_000\/Projektit\/omavoiman-kotisivut\/src\/sass\/default\.scss}line{font-family:\00003134}}
-h3, h4, h5, h6, .navigation-link {
+h3, h4, h5, h6, nav {
   font-family: "Calibri", "Trebuchet MS", Arial, Helvetica, sans-serif;
   font-weight: bold;
   color: #952230;
@@ -584,14 +584,34 @@ h3:first-child, h4:first-child, h5:first-child, h6:first-child {
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jouni_000\/Projektit\/omavoiman-kotisivut\/src\/sass\/default\.scss}line{font-family:\00003151}}
-.navigation-link {
+nav ul {
+  margin: 0.4em 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jouni_000\/Projektit\/omavoiman-kotisivut\/src\/sass\/default\.scss}line{font-family:\00003153}}
+nav ul li {
+  display: inline;
+  list-style-type: none;
   font-size: 1.1em;
   padding: 0 5px;
   margin: 0 0.5em;
-  text-decoration: none;
   border-bottom: 0.1em solid silver;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jouni_000\/Projektit\/omavoiman-kotisivut\/src\/sass\/default\.scss}line{font-family:\00003158}}
-.navigation-link.selected, .navigation-link:hover {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jouni_000\/Projektit\/omavoiman-kotisivut\/src\/sass\/default\.scss}line{font-family:\00003161}}
+nav ul li a, nav ul li a:link, nav ul li a:active, nav ul li a:visited, nav ul li a:hover {
+  text-decoration: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jouni_000\/Projektit\/omavoiman-kotisivut\/src\/sass\/default\.scss}line{font-family:\00003165}}
+nav ul li.current, nav ul li:hover {
   border-bottom: 0.2em solid #952230;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jouni_000\/Projektit\/omavoiman-kotisivut\/src\/sass\/default\.scss}line{font-family:\00003171}}
+a, a:link, a:active, a:visited, a:hover {
+  color: #952230;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jouni_000\/Projektit\/omavoiman-kotisivut\/src\/sass\/default\.scss}line{font-family:\00003174}}
+a:active {
+  position: relative;
+  top: 2px;
 }
