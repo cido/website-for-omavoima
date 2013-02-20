@@ -6,6 +6,7 @@
 $base-font-size: 16px;
 $real-font-size: (18px / $base-font-size) * 1em;
 $header-font-size: 1.39em;
+$navigation-font-size: 1.1em;
 $normal-font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
 $max-column-width: (950px / $base-font-size) * 1em;
 $sidebar-visible-after-width: (860px / $base-font-size) * 1em;
@@ -118,6 +119,9 @@ header {
 			width: $sidebar-width;
 		}
 	}
+	nav ul li.lastLi {
+		display: none;
+	}
 
 }
 
@@ -125,11 +129,6 @@ header {
 .waterdrop-top-right    { @include border-top-right-radius($waterdrop-rounding-size); }
 .waterdrop-bottom-left  { @include border-bottom-left-radius($waterdrop-rounding-size); }
 .waterdrop-bottom-right { @include border-bottom-right-radius($waterdrop-rounding-size); }
-
-nav {
-	text-align: center;
-	padding: 0.5em 0;
-}
 
 h3, h4, h5, h6, nav {
 	font-family: "Calibri", $normal-font-family;
@@ -139,31 +138,46 @@ h3, h4, h5, h6, nav {
 	-webkit-font-smoothing: antialiased;
 }
 
-h3, h4, h5, h6 {
-	margin-top: 2em;
-	font-size: $header-font-size;
-
-	&:first-child {
-		margin-top: 1em;
+aside {
+	h1, h2, h3, h4, h5, h6 {
+		font-size: $navigation-font-size;
+		margin: 0;
+		padding: 0.9em;
+		text-align: center;
 	}
 }
 
-nav ul {
-	margin: 0.4em 0;
-	li {
-		display: inline;
-		list-style-type: none;
-		font-size: 1.1em;
-		padding: 0 5px;
-		margin: 0 0.5em;
-		border-bottom: 0.1em solid silver;
+#main-content {
+	h3, h4, h5, h6 {
+		margin-top: 2em;
+		font-size: $header-font-size;
 
-		a, a:link, a:active, a:visited, a:hover {
-			text-decoration: none;
+		&:first-child {
+			margin-top: 1em;
 		}
+	}
+}
 
-		&.current, &:hover {
-			border-bottom: 0.2em solid $deep-red-color;
+nav {
+	text-align: center;
+	padding: 0.9em 0;
+	ul {
+		margin: 0;
+		li {
+			display: inline;
+			list-style-type: none;
+			font-size: $navigation-font-size;
+			padding: 0 5px;
+			margin: 0 0.5em;
+			border-bottom: 0.1em solid silver;
+
+			a, a:link, a:active, a:visited, a:hover {
+				text-decoration: none;
+			}
+
+			&.current, &:hover {
+				border-bottom: 0.2em solid $deep-red-color;
+			}
 		}
 	}
 }
