@@ -5,37 +5,16 @@
 		initialize: function () {
 			var self = this;
 
-			var logo = document.getElementById('logo');
-			//var slogan = document.getElementById('slogan');
-			//var sloganTestingArea = this._addSloganTestingArea(slogan);
-
 			this._detectCssSupportFor('box-shadow');
 
 			if (this._supportsSvg() === false) {
+				var logo = document.getElementById('logo');
 				logo.setAttribute('src', logo.getAttribute('data-fallback-src'));
 			}
 
 			window.addEventListener('resize', this._initializeFacebookLikeBox.bind(this));
 			this._initializeFacebookLikeBox();
 
-		},
-
-		_addSloganTestingArea: function (slogan) {
-			var span = document.createElement('span');
-			span.className = 'slogan testing-area';
-			span.innerHTML = slogan.innerHTML;
-			document.body.appendChild(span);
-			return span;
-		},
-
-		_onResize: function (logo, slogan, testingArea) {
-			if (logo.offsetWidth !== 0 && testingArea.offsetWidth !== 0) {
-				var showAligned = (logo.offsetWidth * 0.46 >= testingArea.offsetWidth);
-				var newClassName = (showAligned ? 'slogan aligned' : 'slogan');
-				if (slogan.className !== newClassName) {
-					slogan.className = newClassName;
-				}
-			}
 		},
 
 		_supportsSvg: function () {
@@ -66,25 +45,33 @@
 			return str.charAt(0).toUpperCase() + str.slice(1);
 		},
 
+		_elementIsVisible: function (element) {
+			return (element && element.offsetWidth > 0 && element.offsetHeight > 0);
+		},
+
 		_likeBoxInitialized: false,
 		_initializeFacebookLikeBox: function () {
 			if (this._likeBoxInitialized === false) {
 
 				var d = document;
+				var sidebar = d.getElementsByTagName('aside')[0];
 
-				var likeBoxHeight = Math.max(400, parseInt(window.innerHeight*0.8, 10));
-				console.log(likeBoxHeight);
-				d.getElementById('fb-like-box').setAttribute('data-height', likeBoxHeight);
+				if (this._elementIsVisible(sidebar)) {
 
-				var s = 'script';
-				var id = 'facebook-jssdk';
-				var js, fjs = d.getElementsByTagName(s)[0];
-				if (d.getElementById(id)) return;
-				js = d.createElement(s); js.id = id;
-				js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&appId=216895838369307";
-				fjs.parentNode.insertBefore(js, fjs);
-				this._likeBoxInitialized = true;
+					var likebox = d.getElementById('fb-like-box');
+					var likeBoxHeight = Math.max(400, parseInt(window.innerHeight*0.8, 10));
+					likebox.setAttribute('data-height', likeBoxHeight);
 
+					var s = 'script';
+					var id = 'facebook-jssdk';
+					var js, fjs = d.getElementsByTagName(s)[0];
+					if (d.getElementById(id)) return;
+					js = d.createElement(s); js.id = id;
+					js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&appId=216895838369307";
+					fjs.parentNode.insertBefore(js, fjs);
+					this._likeBoxInitialized = true;
+
+				}
 			}
 		}
 	};

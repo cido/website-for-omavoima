@@ -1,9 +1,4 @@
-@import "compass";
-@import "normalize";
-@import "fb-like-box";
-
-
-
+$base-font-size: 16px;
 $max-column-width: (960px / $base-font-size) * 1em;
 $sidebar-visible-after-width: (860px / $base-font-size) * 1em;
 $main-column-width: 72%;
@@ -13,6 +8,11 @@ $column-margin: 1em;
 
 $deep-red-color: #952230;
 
+@import "compass";
+@import "mixins";
+@import "normalize";
+@import "fb-like-box";
+@import "navigation";
 @import "typography";
 @import "eyecandy";
 
@@ -86,34 +86,11 @@ header {
 			width: $sidebar-width;
 		}
 	}
-	nav ul li.lastLi {
-		display: none;
-	}
 
 }
 
 
-nav {
-	ul {
-		margin: 0;
-		padding: 0;
-		li {
-			display: inline;
-			list-style-type: none;
-			padding: 0 5px;
-			margin: 0 0.5em;
-			border-bottom: 0.1em solid silver;
 
-			a, a:link, a:active, a:visited, a:hover {
-				text-decoration: none;
-			}
-
-			&.current, &:hover {
-				border-bottom: 0.2em solid $deep-red-color;
-			}
-		}
-	}
-}
 
 a, a:link, a:active, a:visited, a:hover {
 	color: $deep-red-color;
