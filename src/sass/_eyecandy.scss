@@ -1,0 +1,45 @@
+
+$block-border-color: #dddddd;
+$waterdrop-rounding-size: 0.7em;
+
+// BLOCKS ==========================================
+
+.block {
+	background-color: white;
+	border-top: 1px solid $block-border-color;
+	margin: 0;
+	padding: 1em 0;
+
+	&.facebook {
+		padding-bottom: 0;
+	}
+}
+
+header.block {
+	border: 0;
+	padding-top: 0;
+}
+
+@media screen and (min-width: $mobile-column-width) {
+	.block {
+		margin-bottom: 1em;
+		border: 1px solid $block-border-color;
+
+		&.with-padding {
+			padding-left: 2em;
+			padding-right: 2em;
+		}
+
+		.box-shadow & {
+			border: none;
+			@include box-shadow(0 0 3px 2px $block-border-color);
+		}
+	}
+}
+
+// WATERDROP CORNERS ===============================
+
+.waterdrop-top-left     { @include border-top-left-radius($waterdrop-rounding-size); }
+.waterdrop-top-right    { @include border-top-right-radius($waterdrop-rounding-size); }
+.waterdrop-bottom-left  { @include border-bottom-left-radius($waterdrop-rounding-size); }
+.waterdrop-bottom-right { @include border-bottom-right-radius($waterdrop-rounding-size); }

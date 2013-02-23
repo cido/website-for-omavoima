@@ -1,32 +1,22 @@
-@import "compass/css3/box-shadow";
-@import "compass/css3/border-radius";
+@import "compass";
 @import "normalize";
 @import "fb-like-box";
 
-$base-font-size: 16px;
-$real-font-size: (18px / $base-font-size) * 1em;
-$header-font-size: 1.39em;
-$navigation-font-size: 1.1em;
-$normal-font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-$max-column-width: (950px / $base-font-size) * 1em;
+
+
+$max-column-width: (960px / $base-font-size) * 1em;
 $sidebar-visible-after-width: (860px / $base-font-size) * 1em;
 $main-column-width: 72%;
 $sidebar-width: 25%;
-$mobile-column-width: 320px;
+$mobile-column-width: 450px;
 $column-margin: 1em;
-$waterdrop-rounding-size: 0.8em;
 
 $deep-red-color: #952230;
-$block-border-color: #dddddd;
 
-html {
-	font-size: $base-font-size;
-}
+@import "typography";
+@import "eyecandy";
 
-body {
-	font-family: $normal-font-family;
-	line-height: 26px;
-}
+
 
 #container {
 	//background-color: $container-border-color;
@@ -41,11 +31,6 @@ body {
 		width: 96%;
 		margin: 0 auto;
 	}
-}
-
-.block {
-	background-color: white;
-	margin: 0 0 0.5em 0;
 }
 
 header {
@@ -63,7 +48,6 @@ header {
 	}
 
 	#slogan {
-		font-size: 1em;
 		font-style: italic;
 		font-weight: normal;
 		text-align: center;
@@ -76,7 +60,6 @@ header {
 @media screen and (min-width: $mobile-column-width) {
 	body {
 		background-image: image-url('wood-floor.jpg');
-		font-size: $real-font-size;
 	}
 	#container {
 		width: 96%;
@@ -84,23 +67,7 @@ header {
 			width: 100%;
 		}
 	}
-	header {
-		&.block {
-			margin: 1em 0;
-		}
-		#slogan {
-			font-size: 1.2em;
-		}
-	}
-	.block {
-		margin: 0 0 1em 0;
-		border: 1px solid $block-border-color;
 
-		.box-shadow & {
-			border: none;
-			@include box-shadow(0 0 3px 2px $block-border-color);
-		}
-	}
 	section {
 		padding: 2em;
 	}
@@ -125,48 +92,14 @@ header {
 
 }
 
-.waterdrop-top-left     { @include border-top-left-radius($waterdrop-rounding-size); }
-.waterdrop-top-right    { @include border-top-right-radius($waterdrop-rounding-size); }
-.waterdrop-bottom-left  { @include border-bottom-left-radius($waterdrop-rounding-size); }
-.waterdrop-bottom-right { @include border-bottom-right-radius($waterdrop-rounding-size); }
-
-h3, h4, h5, h6, nav {
-	font-family: "Calibri", $normal-font-family;
-	font-weight: bold;
-	color: $deep-red-color;
-	text-transform: uppercase;
-	-webkit-font-smoothing: antialiased;
-}
-
-aside {
-	h1, h2, h3, h4, h5, h6 {
-		font-size: $navigation-font-size;
-		margin: 0;
-		padding: 0.9em;
-		text-align: center;
-	}
-}
-
-#main-content {
-	h3, h4, h5, h6 {
-		margin-top: 2em;
-		font-size: $header-font-size;
-
-		&:first-child {
-			margin-top: 1em;
-		}
-	}
-}
 
 nav {
-	text-align: center;
-	padding: 0.9em 0;
 	ul {
 		margin: 0;
+		padding: 0;
 		li {
 			display: inline;
 			list-style-type: none;
-			font-size: $navigation-font-size;
 			padding: 0 5px;
 			margin: 0 0.5em;
 			border-bottom: 0.1em solid silver;

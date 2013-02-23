@@ -1,0 +1,74 @@
+$base-font-size: 16px;
+$real-font-size: (18px / $base-font-size) * 1em;
+$line-height: 1.625em;
+$navigation-font-size: 1.1em;
+$normal-font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+$header-font-family: "Calibri", $normal-font-family;
+
+
+// Font sizes ===================================================
+
+html {
+	font-size: $base-font-size;
+}
+
+body {
+	font-family: $normal-font-family;
+	line-height: $line-height;
+}
+
+@media screen and (min-width: $mobile-column-width) {
+	#slogan {
+		font-size: 1.2em;
+	}
+	#main-content, aside {
+		font-size: $real-font-size;
+	}
+}
+
+@media screen and (min-width: $sidebar-visible-after-width) {
+	#slogan {
+		font-size: 1.4em;
+	}
+}
+
+// Header styles ================================================
+
+h1 { font-size: 1.6em }
+h2 { font-size: 1.5em }
+h3 { font-size: 1.4em }
+h4 { font-size: 1.3em }
+h5 { font-size: 1.2em }
+h6 { font-size: 1.1em }
+
+.header-style { // to be extended
+	font-family: $header-font-family;
+	font-weight: bold;
+	color: $deep-red-color;
+	text-transform: uppercase;
+	-webkit-font-smoothing: antialiased;
+}
+.navigation-style { // to be extended
+	@extend .header-style;
+	font-size: $navigation-font-size;
+	margin: 0;
+	//padding: 0.9em 0;
+	text-align: center;
+}
+
+#main-content { #{headers()} {
+	@extend .header-style;
+	margin-top: 2em;
+	&:first-child {
+		margin-top: 1em;
+	}
+}}
+
+aside { #{headers()} {
+	@extend .navigation-style;
+	margin-bottom: 1em;
+}}
+
+nav {
+	@extend .navigation-style;
+}

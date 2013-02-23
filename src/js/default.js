@@ -71,6 +71,11 @@
 			if (this._likeBoxInitialized === false) {
 
 				var d = document;
+
+				var likeBoxHeight = Math.max(400, parseInt(window.innerHeight*0.8, 10));
+				console.log(likeBoxHeight);
+				d.getElementById('fb-like-box').setAttribute('data-height', likeBoxHeight);
+
 				var s = 'script';
 				var id = 'facebook-jssdk';
 				var js, fjs = d.getElementsByTagName(s)[0];
