@@ -1,5 +1,13 @@
 (function () {
 
+	// Adapted from Underscore.js 1.4.4
+	var bind = function(func, context) {
+		var args = Array.prototype.slice.call(arguments, 2);
+		return function() {
+			return func.apply(context, args.concat(Array.prototype.slice.call(arguments)));
+		};
+	};
+
 	var page = {
 
 		initialize: function () {
@@ -12,7 +20,7 @@
 				logo.setAttribute('src', logo.getAttribute('data-fallback-src'));
 			}
 
-			window.addEventListener('resize', this._initializeFacebookLikeBox.bind(this));
+			window.addEventListener('resize', bind(this._initializeFacebookLikeBox, this));
 			this._initializeFacebookLikeBox();
 
 		},
@@ -52,7 +60,6 @@
 		_likeBoxInitialized: false,
 		_initializeFacebookLikeBox: function () {
 			if (this._likeBoxInitialized === false) {
-
 				var d = document;
 				var sidebar = d.getElementsByTagName('aside')[0];
 
