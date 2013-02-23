@@ -440,12 +440,13 @@ nav ul li {
   list-style-type: none;
   background-color: #e6e6e6;
   margin: 0.15em 0;
+  white-space: nowrap;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jouni_000\/Projektit\/omavoiman-kotisivut\/src\/sass\/_navigation\.scss}line{font-family:\0000310}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jouni_000\/Projektit\/omavoiman-kotisivut\/src\/sass\/_navigation\.scss}line{font-family:\0000311}}
 nav ul li a, nav ul li a:link, nav ul li a:active, nav ul li a:visited, nav ul li a:hover {
   text-decoration: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jouni_000\/Projektit\/omavoiman-kotisivut\/src\/sass\/_navigation\.scss}line{font-family:\0000314}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jouni_000\/Projektit\/omavoiman-kotisivut\/src\/sass\/_navigation\.scss}line{font-family:\0000315}}
 nav ul li.current, nav ul li:hover {
   background-color: #952230;
 }
@@ -453,9 +454,21 @@ nav ul li.current, nav ul li:hover {
 nav ul li.current a, nav ul li.current a:link, nav ul li.current a:active, nav ul li.current a:visited, nav ul li.current a:hover, nav ul li:hover a, nav ul li:hover a:link, nav ul li:hover a:active, nav ul li:hover a:visited, nav ul li:hover a:hover {
   color: white;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jouni_000\/Projektit\/omavoiman-kotisivut\/src\/sass\/_navigation\.scss}line{font-family:\0000318}}
+nav ul li.current .facebook-logo, nav ul li:hover .facebook-logo {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jouni_000\/Projektit\/omavoiman-kotisivut\/src\/sass\/_navigation\.scss}line{font-family:\0000326}}
+.facebook-logo {
+  height: 0.8em;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
+  opacity: 0.6;
+}
 
 @media screen and (min-width: 450px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jouni_000\/Projektit\/omavoiman-kotisivut\/src\/sass\/_navigation\.scss}line{font-family:\0000325}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jouni_000\/Projektit\/omavoiman-kotisivut\/src\/sass\/_navigation\.scss}line{font-family:\0000334}}
   nav ul li {
     display: inline;
     background-color: transparent;
@@ -463,7 +476,7 @@ nav ul li.current a, nav ul li.current a:link, nav ul li.current a:active, nav u
     margin: 0 0.5em;
     border-bottom: 0.1em solid silver;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jouni_000\/Projektit\/omavoiman-kotisivut\/src\/sass\/_navigation\.scss}line{font-family:\0000332}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jouni_000\/Projektit\/omavoiman-kotisivut\/src\/sass\/_navigation\.scss}line{font-family:\0000341}}
   nav ul li.current, nav ul li:hover {
     background-color: transparent;
     border-bottom: 0.2em solid #952230;
@@ -474,7 +487,7 @@ nav ul li.current a, nav ul li.current a:link, nav ul li.current a:active, nav u
   }
 }
 @media screen and (min-width: 53.75em) {
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jouni_000\/Projektit\/omavoiman-kotisivut\/src\/sass\/_navigation\.scss}line{font-family:\0000343}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/jouni_000\/Projektit\/omavoiman-kotisivut\/src\/sass\/_navigation\.scss}line{font-family:\0000352}}
   nav ul li.lastLi {
     display: none;
   }

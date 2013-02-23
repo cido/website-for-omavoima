@@ -6,6 +6,7 @@ nav {
 			list-style-type: none;
 			background-color: lighten(black, 90%);
 			margin: 0.15em 0;
+			white-space: nowrap;
 
 			a, a:link, a:active, a:visited, a:hover {
 				text-decoration: none;
@@ -14,9 +15,17 @@ nav {
 			&.current, &:hover {
 				background-color: $deep-red-color;
 				@include link-color(white);
+				.facebook-logo {
+					@include opacity(1);
+				}
 			}
 		}
 	}
+}
+
+.facebook-logo {
+	height: 0.8em;
+	@include opacity(0.6);
 }
 
 @media screen and (min-width: $mobile-column-width) {
