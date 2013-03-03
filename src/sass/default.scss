@@ -6,6 +6,7 @@ $sidebar-width: 25%;
 $mobile-column-width: 450px;
 $column-margin: 1em;
 
+$block-border-color: #dddddd;
 $deep-red-color: #952230;
 
 @import "compass";
@@ -15,6 +16,7 @@ $deep-red-color: #952230;
 @import "navigation";
 @import "typography";
 @import "eyecandy";
+@import "inline-images";
 
 
 
@@ -59,7 +61,7 @@ header {
 
 @media screen and (min-width: $mobile-column-width) {
 	body {
-		background-image: image-url('wood-floor.jpg');
+		background-image: image-url('website-assets/wood-floor.jpg');
 	}
 	#container {
 		width: 96%;
@@ -98,4 +100,9 @@ a, a:link, a:active, a:visited, a:hover {
 a:active {
 	position: relative;
 	top: 2px;
+}
+
+footer {
+	color: darken($block-border-color, 30%);
+	font-size: 0.75em;
 }

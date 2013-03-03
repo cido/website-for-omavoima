@@ -1,0 +1,10 @@
+section img {
+	width: 90%;
+	margin-left: 5%;
+}
+
+@media screen and (min-width: $mobile-column-width) {
+	section img {
+		@include box-shadow(1px 1px 7px 2px darken($block-border-color, 25%));
+	}
+}
