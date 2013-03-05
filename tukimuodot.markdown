@@ -1,5 +1,6 @@
 ---
 layout: default
+weight: 2
 otsikko: Neuropsykiatrista yksilö- ja ryhmävalmennusta Tampereella
 linkki: Tukimuodot
 ---

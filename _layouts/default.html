@@ -34,8 +34,9 @@
 
 	        <header class="block waterdrop-bottom-left">
 	        	<img id="keys" src="image-assets/keys.jpg" />
-		        <img id="logo" src="image-assets/logo.svg" data-fallback-src="image-assets/logo.png" />
-		        <span id="slogan">Neuropsykiatrista ohjausta ja valmennusta</span>
+		        <img id="logo" alt="{{ site.name }}"
+                    src="image-assets/logo.svg" data-fallback-src="image-assets/logo.png" />
+		        <span id="slogan">{{ site.description }}</span>
 	        </header>
 
             <aside>
@@ -60,18 +61,11 @@
             <div id="main-content">
 
                 <nav class="block with-padding waterdrop-top-left waterdrop-bottom-right">
-                    <!--<ul>
-                        <li class="current"><a href="esittely.html" class="navigation-link selected">Esittely</a></li>
-                        <li><a href="tukimuodot.html" class="navigation-link">Tukimuodot</a></li>
-                        <li><a href="yhteystiedot.html" class="navigation-link">Yhteystiedot</a></li>
-                        
-                    </ul>-->
 
                     <ul>
                         {% sorted_for p in site.pages sort_by:weight %}
                             <li {% if p.url == page.url %}class="current"{% endif %}>
-                                <a href="{% if p.url == "/index.html" %} {{ site.url }} {% else %} {{ p.url }} {% endif %}"
-                                    class="navigation-link">
+                                <a href="{% if p.url == "/index.html" %} {{ site.url }} {% else %} {{ p.url }} {% endif %}" class="navigation-link">
                                     {{ p.linkki }}
                                 </a>
                             </li>
