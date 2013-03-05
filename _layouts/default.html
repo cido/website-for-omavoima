@@ -64,18 +64,24 @@
                         <li class="current"><a href="esittely.html" class="navigation-link selected">Esittely</a></li>
                         <li><a href="tukimuodot.html" class="navigation-link">Tukimuodot</a></li>
                         <li><a href="yhteystiedot.html" class="navigation-link">Yhteystiedot</a></li>
-                        <li class="lastLi"><a href="ajankohtaista.html" class="navigation-link hide-">Ajankohtaista (<img class="facebook-logo" src="image-assets/facebook-logo.png" />)</a></li>
+                        
                     </ul>-->
 
                     <ul>
-  {% sorted_for p in site.pages sort_by:weight %}
-    <li {% if p.url == page.url %}class="current"{% endif %}>
-      <a href="{{ p.url }}" class="navigation-link">
-        {{ p.linkki }}
-      </a>
-    </li>
-  {% endsorted_for %}
-</ul>
+                        {% sorted_for p in site.pages sort_by:weight %}
+                            <li {% if p.url == page.url %}class="current"{% endif %}>
+                                <a href="{% if p.url == "/index.html" %} {{ site.url }} {% else %} {{ p.url }} {% endif %}"
+                                    class="navigation-link">
+                                    {{ p.linkki }}
+                                </a>
+                            </li>
+                        {% endsorted_for %}
+                        <li class="lastLi">
+                            <a href="http://facebook.com" class="navigation-link hide-">
+                                Ajankohtaista (<img class="facebook-logo" src="image-assets/facebook-logo.png" />)
+                            </a>
+                        </li>
+                    </ul>
 
                 </nav>
 
