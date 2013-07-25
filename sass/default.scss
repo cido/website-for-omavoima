@@ -61,7 +61,7 @@ header {
 
 @media screen and (min-width: $mobile-column-width) {
 	body {
-		background-image: image-url('wood-floor.jpg');
+		background-image: url('../image-assets/wood-floor.jpg');
 	}
 	#container {
 		width: 96%;
