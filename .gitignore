@@ -5,3 +5,5 @@ node_modules
 /_site
 /css
 /sass/.sass-cache
+
+*~
