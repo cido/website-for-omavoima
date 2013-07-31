@@ -58,7 +58,7 @@ module.exports = function(grunt) {
             productionJekyll: {
               command: function () {
                 var dir = grunt.option('dir') || '_site';
-                return 'rm -rf ' +dir+ '/* && jekyll build --dir=' +dir;
+                return 'rm -rf ' +dir+ '/* && jekyll build ' +dir;
               }
             }
         },
