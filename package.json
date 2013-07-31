@@ -1,0 +1,17 @@
+{
+  "name": "omavoiman-kotisivut",
+  "description": "Omavoima-hankkeen",
+  "version": "0.0.1",
+  "homepage": "https://github.com/cido/website-for-omavoima",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:cido/website-for-omavoima.git"
+  },
+  "devDependencies": {
+    "grunt"                 : "0.4.x",
+    "grunt-contrib-connect" : "0.3.x",
+    "grunt-contrib-compass" : "0.1.x",
+    "grunt-contrib-watch"   : "0.4.x",
+    "grunt-shell"           : "0.3.x"
+  }
+}
