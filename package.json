@@ -12,6 +12,6 @@
     "grunt-contrib-connect" : "0.3.x",
     "grunt-contrib-compass" : "0.1.x",
     "grunt-contrib-watch"   : "0.4.x",
-    "grunt-shell"           : "0.2.x"
+    "grunt-shell"           : "0.3.x"
   }
 }

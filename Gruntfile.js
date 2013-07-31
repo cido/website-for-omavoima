@@ -56,7 +56,10 @@ module.exports = function(grunt) {
               command: 'rm -rf _site/* && jekyll --url "http://localhost:80/"'
             },
             productionJekyll: {
-              command: 'rm -rf _site/*; jekyll'
+              command: function () {
+                var dir = grunt.option('dir') || '_site';
+                return 'rm -rf ' +dir+ '/* && jekyll ' +dir;
+              }
             }
         },
 
