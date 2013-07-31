@@ -5,7 +5,7 @@ otsikko: Neuropsykiatrista yksilö- ja ryhmävalmennusta Tampereella
 linkki: Etusivu
 ---
 
-Mitä on omavoima?
+Mitä on omavoima??
 =================
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod

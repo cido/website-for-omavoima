@@ -20,8 +20,8 @@
 				logo.setAttribute('src', logo.getAttribute('data-fallback-src'));
 			}
 
-			window.addEventListener('resize', bind(this._initializeFacebookLikeBox, this));
-			this._initializeFacebookLikeBox();
+			//window.addEventListener('resize', bind(this._initializeFacebookLikeBox, this));
+			//this._initializeFacebookLikeBox();
 
 		},
 
