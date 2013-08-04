@@ -46,7 +46,7 @@ module.exports = function(grunt) {
                 command: 'rm -rf _site/css/* && cp css/*.css _site/css/'
             },
             developmentJekyll: {
-              command: 'rm -rf _site/* && jekyll --url "http://localhost:80/"'
+              command: 'rm -rf _site/* && jekyll --url "http://localhost:80/" --base-url "/"'
             },
             productionJekyll: {
               command: function () {
