@@ -1,0 +1,16 @@
+{
+	"folders":
+	[
+		{
+			"path": "/C/Users/jouni_000/Projektit/omavoiman-kotisivut",
+			"folder_exclude_patterns": [
+				"node_modules",
+				"css",
+				"_site"
+			],
+			"file_exclude_patterns": [
+				"*.sublime-workspace"
+			]
+		}
+	]
+}

@@ -1,0 +1,55 @@
+nav {
+	ul {
+		margin: 0;
+		padding: 0;
+		li {
+			list-style-type: none;
+			background-color: lighten(black, 90%);
+			margin: 0.15em 0;
+			white-space: nowrap;
+
+			a, a:link, a:active, a:visited, a:hover {
+				text-decoration: none;
+			}
+
+			&.current, &:hover {
+				background-color: $deep-red-color;
+				@include link-color(white);
+				.facebook-logo {
+					@include opacity(1);
+				}
+			}
+		}
+	}
+}
+
+.facebook-logo {
+	height: 0.8em;
+	@include opacity(0.6);
+}
+
+@media screen and (min-width: $mobile-column-width) {
+	nav {
+		ul {
+			li {
+				display: inline;
+				background-color: transparent;
+				padding: 0 5px;
+				margin: 0 0.5em;
+				border-bottom: 0.1em solid silver;
+
+				&.current, &:hover {
+					background-color: transparent;
+					@include link-color($deep-red-color);
+					border-bottom: 0.2em solid $deep-red-color;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: $sidebar-visible-after-width) {
+	nav ul li.lastLi {
+		display: none;
+	}
+}

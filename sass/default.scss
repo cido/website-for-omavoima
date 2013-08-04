@@ -1,0 +1,108 @@
+$base-font-size: 16px;
+$max-column-width: (960px / $base-font-size) * 1em;
+$sidebar-visible-after-width: (860px / $base-font-size) * 1em;
+$main-column-width: 72%;
+$sidebar-width: 25%;
+$mobile-column-width: 450px;
+$column-margin: 1em;
+
+$block-border-color: #dddddd;
+$deep-red-color: #952230;
+
+@import "compass";
+@import "mixins";
+@import "normalize";
+@import "fb-like-box";
+@import "navigation";
+@import "typography";
+@import "eyecandy";
+@import "inline-images";
+
+
+
+#container {
+	//background-color: $container-border-color;
+	width: 100%;
+	max-width: $max-column-width;
+	margin: 0 auto;
+
+	aside {
+		display: none;
+	}
+	#main-content {
+		width: 96%;
+		margin: 0 auto;
+	}
+}
+
+header {
+	background-color: white;
+	position: relative;
+	text-align: center;
+
+	#keys {
+		width: 100%;
+	}
+
+	#logo {
+		width: 100%;
+		margin-top: -6.5%; // trial end error...
+	}
+
+	#slogan {
+		font-style: italic;
+		font-weight: normal;
+		text-align: center;
+		-webkit-font-smoothing: antialiased;
+		margin: 0;
+		padding: 0 0.5em 0.5em 0.5em;
+	}
+}
+
+@media screen and (min-width: $mobile-column-width) {
+	body {
+		background-image: url('../image-assets/wood-floor.jpg');
+	}
+	#container {
+		width: 96%;
+		#main-content {
+			width: 100%;
+		}
+	}
+
+	section {
+		padding: 2em;
+	}
+}
+
+@media screen and (min-width: $sidebar-visible-after-width) {
+
+	#container {
+		#main-content {
+			width: auto;
+			margin-right: 100% - $main-column-width;
+		}
+		aside {
+			display: block;
+			float: right;
+			width: $sidebar-width;
+		}
+	}
+
+}
+
+
+
+
+a, a:link, a:active, a:visited, a:hover {
+	color: $deep-red-color;
+}
+a:active {
+	position: relative;
+	top: 2px;
+}
+
+footer {
+	color: darken($block-border-color, 30%);
+	font-size: 0.75em;
+}
