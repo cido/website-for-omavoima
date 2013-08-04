@@ -33,13 +33,6 @@ module.exports = function(grunt) {
                 options: {
                     debugInfo: true
                 }
-            },
-            production: {
-                options: {
-                    debugInfo: false,
-                    noLineComments: true,
-                    outputStyle: 'compressed'
-                }
             }
         },
 
@@ -80,7 +73,6 @@ module.exports = function(grunt) {
     ]);
 
     grunt.registerTask('build', [
-      'compass:production',
       'shell:productionJekyll'
     ]);
 
