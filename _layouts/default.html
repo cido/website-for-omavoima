@@ -63,13 +63,13 @@
                 <nav class="block with-padding waterdrop-top-left waterdrop-bottom-right">
 
                     <ul>
-                        {% sorted_for p in site.pages sort_by:weight %}
+                        {% for weight in (1..100) %}{% for p in site.pages %}{% if p.weight == weight %}
                             <li {% if p.url == page.url %}class="current"{% endif %}>
                                 <a href="{% if p.url == "/index.html" %} {{ site.url }} {% else %} {{ p.url }} {% endif %}" class="navigation-link">
                                     {{ p.linkki }}
                                 </a>
                             </li>
-                        {% endsorted_for %}
+                        {% endif %}{% endfor %}{% endfor %}
                         <li class="lastLi">
                             <a href="http://facebook.com" class="navigation-link hide-">
                                 Ajankohtaista (<img class="facebook-logo" src="image-assets/facebook-logo.png" />)
