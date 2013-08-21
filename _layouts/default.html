@@ -1,11 +1,20 @@
 <!DOCTYPE html>
 <!--[if IEMobile 7 ]>    <html class="no-js iem7"> <![endif]-->
 <!--[if (gt IEMobile 7)|!(IEMobile)]><!--> <html class="no-js"> <!--<![endif]-->
+
+{% capture show_sidebar %}
+    {% if page.tyyppi != "uutisten_etusivu" and page.tyyppi != "uutinen" %}
+        {{ "show-sidebar" }}
+    {% endif %}
+{% endcapture %}
+
     <head>
         <meta charset="utf-8">
         <base href="{{ site.url }}" />
         <title>
-            {% if page.title %} {{ page.title }} - {% endif %}
+            {% if page.ylareunan_otsikko %}
+                {{ page.ylareunan_otsikko }} -
+            {% endif %}
             {{ site.name }}
         </title>
         <meta name="description" content="">
@@ -28,7 +37,7 @@
         <meta name="msapplication-TileColor" content="#8E252E">
 
     </head>
-    <body>
+    <body class="{{ show_sidebar }}">
 
         <div id="container">
 
@@ -61,6 +70,9 @@
     	        <section class="block with-padding waterdrop-top-right waterdrop-bottom-left">
 
                     {{ content }}
+                    {% if page.tyyppi == "uutisten_etusivu" %}
+                        {% include _news.html %}
+                    {% endif %}
 
     			</section>
 

@@ -46,9 +46,3 @@ nav {
 	}
 
 }
-
-@media screen and (min-width: $sidebar-visible-after-width) {
-	.hide-when-sidebar-is-visible {
-		display: none;
-	}
-}

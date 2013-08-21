@@ -77,16 +77,24 @@ header {
 
 @media screen and (min-width: $sidebar-visible-after-width) {
 
-	#container {
-		#main-content {
-			width: auto;
-			margin-right: 100% - $main-column-width;
+	.show-sidebar {
+
+		#container {
+			#main-content {
+				width: auto;
+				margin-right: 100% - $main-column-width;
+			}
+			aside {
+				display: block;
+				float: right;
+				width: $sidebar-width;
+			}
 		}
-		aside {
-			display: block;
-			float: right;
-			width: $sidebar-width;
+
+		.hide-when-sidebar-is-visible {
+			display: none;
 		}
+
 	}
 
 }

@@ -1,7 +1,7 @@
 ---
 layout: default
 tyyppi: uutinen
-otsikko: Neuropsykiatrista yksilö- ja ryhmävalmennusta Tampereella
+ylareunan_otsikko: Neuropsykiatrista yksilö- ja ryhmävalmennusta Tampereella
 linkki: A/Jotain
 ---
 
