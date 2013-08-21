@@ -1,0 +1,22 @@
+<ul>
+    {% for sijainti_paanavigaatiossa in (1..100) %}{% for p in site.pages %}{% if p.sijainti_paanavigaatiossa == sijainti_paanavigaatiossa %}
+
+        {% capture hide_when_sidebar_is_visible %}
+            {% if p.tyyppi == "uutisten_etusivu" %}{{ "hide-when-sidebar-is-visible" }}{% endif %}
+        {% endcapture %}
+
+        {% capture current %}
+            {% if p.url == page.url %}{{ "current" }}{% endif %}
+        {% endcapture %}
+
+        {% capture link_url %}
+            {% if p.url == "/index.html" %}{{ site.url }}{% else %}{{ p.url }}{% endif %}
+        {% endcapture %}
+
+        <li class="navigation-link-container {{ current }}
+            {{ hide_when_sidebar_is_visible }}">
+            <a href="{{ link_url }}" class="navigation-link">{{ p.linkki }}</a>
+        </li>
+
+    {% endif %}{% endfor %}{% endfor %}
+</ul>

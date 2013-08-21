@@ -1,0 +1,8 @@
+<pre>
+{% for p in site.pages %}{% if p.tyyppi == "uutinen" %}
+
+{{ p.date }}
+{{ p.otsikko }}
+
+{% endif %}{% endfor %}
+</pre>

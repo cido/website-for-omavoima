@@ -52,6 +52,9 @@ h6 { font-size: 1.1em }
 	margin: 0;
 	//padding: 0.9em 0;
 	text-align: center;
+	@include links {
+		text-decoration: none;
+	}
 }
 
 #main-content { #{headers()} {

@@ -16,7 +16,7 @@ module.exports = function(grunt) {
                 tasks: [ 'compass:development', 'shell:copyCSS' ]
             },
             other: {
-                files: [ '_layouts/*.html', 'js/*.js', '**/*.markdown' ],
+                files: [ '_layouts/*.html', '_includes/*.html', 'js/*.js', '**/*.markdown' ],
                 tasks: [ 'shell:developmentJekyll' ]
             }
         },

@@ -1,12 +1,11 @@
 ---
 layout: default
-sijainti_paanavigaatiossa: 2
-haviaa_paanavigaatiosta: true
+tyyppi: uutinen
 otsikko: Neuropsykiatrista yksilö- ja ryhmävalmennusta Tampereella
-linkki: Ajankohtaista
+linkki: A/Jotain
 ---
 
-Ajankohtaista/index
+Ajankohtaista/Jotain
 ============================
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod

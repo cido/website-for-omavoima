@@ -1,0 +1,11 @@
+{% for p in site.pages %}
+{% if p.tyyppi == "uutisten_etusivu" %}
+
+<h1>
+	<a href="{{ p.url }}" class="navigation-link">
+		{{ p.linkki }}
+	</a>
+</h1>
+
+{% endif %}
+{% endfor %}

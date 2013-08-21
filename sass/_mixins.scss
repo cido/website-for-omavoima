@@ -1,5 +1,12 @@
-@mixin link-color($color) {
+@mixin links() {
 	a, a:link, a:active, a:visited, a:hover {
+		@content;
+	}
+}
+
+@mixin link-color($color) {
+	@include links {
 		color: $color;
 	}
 }
+

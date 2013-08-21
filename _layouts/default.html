@@ -43,16 +43,8 @@
 
                 <div class="block facebook waterdrop-top-left">
 
-                    <h1>Ajankohtaista</h1>
-
-                    <div id="fb-root"></div>
-                    <div class="fb-like-box" id="fb-like-box"
-                        data-href="http://www.facebook.com/platform"
-                        data-width="292"
-                        data-show-faces="false"
-                        data-stream="true"
-                        data-header="false">
-                    </div>
+                    {% include _news-title.html %}
+                    {% include _news.html %}
 
                 </div>
 
@@ -62,18 +54,7 @@
 
                 <nav class="block with-padding waterdrop-top-left waterdrop-bottom-right">
 
-                    <ul>
-                        {% for sijainti_paanavigaatiossa in (1..100) %}{% for p in site.pages %}{% if p.sijainti_paanavigaatiossa == sijainti_paanavigaatiossa %}
-                            <li class="
-                                {% if p.url == page.url %}current{% endif %}
-                                {% if p.haviaa_paanavigaatiosta == true %}hide-when-sidebar-is-visible{% endif %}
-                            ">
-                                <a href="{% if p.url == "/index.html" %} {{ site.url }} {% else %} {{ p.url }} {% endif %}" class="navigation-link">
-                                    {{ p.linkki }}
-                                </a>
-                            </li>
-                        {% endif %}{% endfor %}{% endfor %}
-                    </ul>
+                    {% include _navigation-ul.html %}
 
                 </nav>
 
