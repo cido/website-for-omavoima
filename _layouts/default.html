@@ -63,18 +63,16 @@
                 <nav class="block with-padding waterdrop-top-left waterdrop-bottom-right">
 
                     <ul>
-                        {% for weight in (1..100) %}{% for p in site.pages %}{% if p.weight == weight %}
-                            <li {% if p.url == page.url %}class="current"{% endif %}>
+                        {% for sijainti_paanavigaatiossa in (1..100) %}{% for p in site.pages %}{% if p.sijainti_paanavigaatiossa == sijainti_paanavigaatiossa %}
+                            <li class="
+                                {% if p.url == page.url %}current{% endif %}
+                                {% if p.haviaa_paanavigaatiosta == true %}hide-when-sidebar-is-visible{% endif %}
+                            ">
                                 <a href="{% if p.url == "/index.html" %} {{ site.url }} {% else %} {{ p.url }} {% endif %}" class="navigation-link">
                                     {{ p.linkki }}
                                 </a>
                             </li>
                         {% endif %}{% endfor %}{% endfor %}
-                        <li class="lastLi">
-                            <a href="http://facebook.com" class="navigation-link hide-">
-                                Ajankohtaista (<img class="facebook-logo" src="image-assets/facebook-logo.png" />)
-                            </a>
-                        </li>
                     </ul>
 
                 </nav>

@@ -1,6 +1,6 @@
 ---
 layout: default
-weight: 1
+sijainti_paanavigaatiossa: 1
 otsikko: Neuropsykiatrista yksilö- ja ryhmävalmennusta Tampereella
 linkki: Etusivu
 ---

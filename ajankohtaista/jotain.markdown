@@ -1,11 +1,10 @@
 ---
 layout: default
-sijainti_paanavigaatiossa: 2
 otsikko: Neuropsykiatrista yksilö- ja ryhmävalmennusta Tampereella
-linkki: Tukimuodot
+linkki: A/Jotain
 ---
 
-Tuokimuodoista juttua tähän
+Ajankohtaista/Jotain
 ============================
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod

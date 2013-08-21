@@ -49,7 +49,7 @@ nav {
 }
 
 @media screen and (min-width: $sidebar-visible-after-width) {
-	nav ul li.lastLi {
+	.hide-when-sidebar-is-visible {
 		display: none;
 	}
 }
