@@ -9,11 +9,14 @@ $column-margin: 1em;
 $block-border-color: #dddddd;
 $deep-red-color: #952230;
 
+$emphasis-border: 0.2em solid $deep-red-color;
+
 @import "compass";
 @import "mixins";
 @import "normalize";
 @import "fb-like-box";
 @import "navigation";
+@import "news";
 @import "typography";
 @import "eyecandy";
 @import "inline-images";

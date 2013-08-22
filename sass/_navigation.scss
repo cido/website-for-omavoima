@@ -41,7 +41,7 @@ nav {
 		border-bottom: 0.1em solid silver;
 
 		.current &, &:hover {
-			border-bottom: 0.2em solid $deep-red-color;
+			border-bottom: $emphasis-border;
 		}
 	}
 

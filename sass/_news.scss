@@ -1,0 +1,38 @@
+.news-list {
+	padding: 0;
+}
+
+.news-item {
+
+	padding: 0.2em;
+	margin-bottom: 1em;
+	list-style-type: none;
+
+	#main-content & {
+		border-left: $emphasis-border;
+		padding: 0.5em 0.5em 0.5em 1em;
+		margin-bottom: 1.5em;
+
+		.excerpt { display: block; }
+	}
+
+	&:hover {
+		background-color: lighten(black, 97%);
+	}
+
+	.excerpt {
+		display: none;
+		color: gray;
+		font-size: 0.9em;
+		font-style: italic;
+	}
+
+}
+
+@media screen and (min-width: $mobile-column-width) {
+
+	.news-list {
+		padding: 0 1em;
+	}
+
+}

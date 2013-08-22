@@ -1,9 +1,13 @@
-<pre>
-{% for p in site.pages %}{% if p.layout == "uutinen" %}
+<ul class="news-list">
+	{% for p in site.pages %}{% if p.layout == "uutinen" %}
 
-{{ p.date | date: "%d.%m.%Y" }}
-{{ p.otsikko }}
-{{ p.url }}
+		<li class="news-item">
 
-{% endif %}{% endfor %}
-</pre>
+			{{ p.date | date: "%d.%m.%Y" }}<br/>
+			<a href="{{ p.url }}">{{ p.otsikko }}</a><br/>
+			<span class="excerpt">{{ p.content | strip_html | truncatewords: 30 }}</span>
+
+		</li>
+
+	{% endif %}{% endfor %}
+</ul>

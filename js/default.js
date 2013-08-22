@@ -20,9 +20,6 @@
 				logo.setAttribute('src', logo.getAttribute('data-fallback-src'));
 			}
 
-			//window.addEventListener('resize', bind(this._initializeFacebookLikeBox, this));
-			//this._initializeFacebookLikeBox();
-
 		},
 
 		_supportsSvg: function () {
@@ -43,44 +40,8 @@
 					break;
 				}
 			}
-		},
-
-		_toCamelCase: function (str) {
-			return str.replace(/(\-[a-z])/g, function($1){return $1.toUpperCase().replace('-','');});
-		},
-
-		_capitaliseFirstLetter: function(str) {
-			return str.charAt(0).toUpperCase() + str.slice(1);
-		},
-
-		_elementIsVisible: function (element) {
-			return (element && element.offsetWidth > 0 && element.offsetHeight > 0);
-		},
-
-		_likeBoxInitialized: false,
-		_initializeFacebookLikeBox: function () {
-			if (this._likeBoxInitialized === false) {
-				var d = document;
-				var sidebar = d.getElementsByTagName('aside')[0];
-
-				if (this._elementIsVisible(sidebar)) {
-
-					var likebox = d.getElementById('fb-like-box');
-					var likeBoxHeight = Math.max(400, parseInt(window.innerHeight*0.8, 10));
-					likebox.setAttribute('data-height', likeBoxHeight);
-
-					var s = 'script';
-					var id = 'facebook-jssdk';
-					var js, fjs = d.getElementsByTagName(s)[0];
-					if (d.getElementById(id)) return;
-					js = d.createElement(s); js.id = id;
-					js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&appId=216895838369307";
-					fjs.parentNode.insertBefore(js, fjs);
-					this._likeBoxInitialized = true;
-
-				}
-			}
 		}
+
 	};
 
 	page.initialize();
