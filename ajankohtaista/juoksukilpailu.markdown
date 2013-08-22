@@ -1,12 +1,9 @@
 ---
-layout: default
-tyyppi: uutinen
-ylareunan_otsikko: Neuropsykiatrista yksilö- ja ryhmävalmennusta Tampereella
+layout: uutinen
+date: 2013-08-22
 linkki: A/Jotain
+otsikko: Juoksukilpailu portaita ylös ja alas
 ---
-
-Ajankohtaista/Jotain
-============================
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua.

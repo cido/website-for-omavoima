@@ -486,12 +486,6 @@ nav ul li {
     border-bottom: 0.2em solid #952230;
   }
 }
-@media screen and (min-width: 53.75em) {
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/jouni_000\/Projektit\/omavoiman-kotisivut\/sass\/_navigation\.scss}line{font-family:\0000351}}
-  .show-sidebar .hide-when-sidebar-is-visible {
-    display: none;
-  }
-}
 @media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/jouni_000\/Projektit\/omavoiman-kotisivut\/sass\/_typography\.scss}line{font-family:\0000310}}
 html {
   font-size: 16px;

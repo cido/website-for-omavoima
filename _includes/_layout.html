@@ -3,7 +3,7 @@
 <!--[if (gt IEMobile 7)|!(IEMobile)]><!--> <html class="no-js"> <!--<![endif]-->
 
 {% capture show_sidebar %}
-    {% if page.tyyppi != "uutisten_etusivu" and page.tyyppi != "uutinen" %}
+    {% if page.layout != "uutisten_etusivu" and page.layout != "uutinen" %}
         {{ "show-sidebar" }}
     {% endif %}
 {% endcapture %}
@@ -12,8 +12,8 @@
         <meta charset="utf-8">
         <base href="{{ site.url }}" />
         <title>
-            {% if page.ylareunan_otsikko %}
-                {{ page.ylareunan_otsikko }} -
+            {% if page.otsikko %}
+                {{ page.otsikko }} -
             {% endif %}
             {{ site.name }}
         </title>
@@ -69,8 +69,13 @@
 
     	        <section class="block with-padding waterdrop-top-right waterdrop-bottom-left">
 
+                    {% if page.automaattinen_otsikon_lisays != false %}
+                        <h1>{{ page.otsikko }}</h1>
+                    {% endif %}
+
                     {{ content }}
-                    {% if page.tyyppi == "uutisten_etusivu" %}
+
+                    {% if page.layout == "uutisten_etusivu" %}
                         {% include _news.html %}
                     {% endif %}
 

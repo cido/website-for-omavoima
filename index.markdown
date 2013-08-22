@@ -1,9 +1,9 @@
 ---
-layout: default
-tyyppi: sivu
+layout: sivu
 sijainti_paanavigaatiossa: 1
-ylareunan_otsikko: Neuropsykiatrista yksilö- ja ryhmävalmennusta Tampereella
 linkki: Etusivu
+otsikko: Neuropsykiatrista yksilö- ja ryhmävalmennusta Tampereella
+automaattinen_otsikon_lisays: false
 ---
 
 Mitä on omavoima??

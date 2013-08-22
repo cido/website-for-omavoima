@@ -1,13 +1,9 @@
 ---
-layout: default
-tyyppi: sivu
+layout: sivu
 sijainti_paanavigaatiossa: 2
-ylareunan_otsikko: Neuropsykiatrista yksilö- ja ryhmävalmennusta Tampereella
 linkki: Tukimuodot
+otsikko: Tukimuotoja on monia
 ---
-
-Tuokimuodoista juttua tähän
-============================
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua.

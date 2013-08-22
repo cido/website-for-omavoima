@@ -2,7 +2,7 @@
     {% for sijainti_paanavigaatiossa in (1..100) %}{% for p in site.pages %}{% if p.sijainti_paanavigaatiossa == sijainti_paanavigaatiossa %}
 
         {% capture hide_when_sidebar_is_visible %}
-            {% if p.tyyppi == "uutisten_etusivu" %}{{ "hide-when-sidebar-is-visible" }}{% endif %}
+            {% if p.layout == "uutisten_etusivu" %}{{ "hide-when-sidebar-is-visible" }}{% endif %}
         {% endcapture %}
 
         {% capture current %}

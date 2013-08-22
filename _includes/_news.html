@@ -1,8 +1,9 @@
 <pre>
-{% for p in site.pages %}{% if p.tyyppi == "uutinen" %}
+{% for p in site.pages %}{% if p.layout == "uutinen" %}
 
-{{ p.date }}
-{{ p.ylareunan_otsikko }}
+{{ p.date | date: "%d.%m.%Y" }}
+{{ p.otsikko }}
+{{ p.url }}
 
 {% endif %}{% endfor %}
 </pre>
