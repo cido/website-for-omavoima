@@ -10,7 +10,7 @@
         {% endcapture %}
 
         {% capture link_url %}
-            {% if p.url == "/index.html" %}{{ site.url }}{% else %}{{ p.url }}{% endif %}
+            {{ p.url | replace:'/index.html','/' }}
         {% endcapture %}
 
         <li class="navigation-link-container {{ current }}

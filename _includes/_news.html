@@ -1,13 +1,21 @@
 <ul class="news-list">
-	{% for p in site.pages %}{% if p.layout == "uutinen" %}
+	{% for p in site.posts %}
 
 		<li class="news-item">
 
 			{{ p.date | date: "%d.%m.%Y" }}<br/>
-			<a href="{{ p.url }}">{{ p.otsikko }}</a><br/>
-			<span class="excerpt">{{ p.content | strip_html | truncatewords: 30 }}</span>
+			<a href="{{ p.url | replace:'/index.html','/' }}">
+				{{ p.otsikko }}
+			</a>
+
+			{% if news_excerpts == true %}
+				<br/>
+				<span class="excerpt">
+					{{ p.content | strip_html | truncatewords: 30 }}
+				</span>
+			{% endif %}
 
 		</li>
 
-	{% endif %}{% endfor %}
+	{% endfor %}
 </ul>

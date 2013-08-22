@@ -76,6 +76,7 @@
                     {{ content }}
 
                     {% if page.layout == "uutisten_etusivu" %}
+                        {% assign news_excerpts = true %}
                         {% include _news.html %}
                     {% endif %}
 

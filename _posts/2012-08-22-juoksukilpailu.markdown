@@ -1,7 +1,5 @@
 ---
 layout: uutinen
-date: 2013-08-23
-linkki: A/Jotain
 otsikko: Juoksukilpailu portaita ylös ja alas
 ---
 

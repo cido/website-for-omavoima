@@ -12,8 +12,6 @@
 		border-left: $emphasis-border;
 		padding: 0.5em 0.5em 0.5em 1em;
 		margin-bottom: 1.5em;
-
-		.excerpt { display: block; }
 	}
 
 	&:hover {
@@ -21,7 +19,6 @@
 	}
 
 	.excerpt {
-		display: none;
 		color: gray;
 		font-size: 0.9em;
 		font-style: italic;

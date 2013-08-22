@@ -1,7 +1,5 @@
 ---
 layout: uutinen
-date: 2013-08-22
-linkki: A/Jotain
 otsikko: Avoimet ovet Omavoimalla
 ---
 

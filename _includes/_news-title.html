@@ -2,7 +2,7 @@
 {% if p.layout == "uutisten_etusivu" %}
 
 <h1>
-	<a href="{{ p.url }}" class="navigation-link">
+	<a href="{{ p.url | replace:'/index.html','/' }}" class="navigation-link">
 		{{ p.linkki }}
 	</a>
 </h1>
