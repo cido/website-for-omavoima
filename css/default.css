@@ -619,6 +619,16 @@ aside h1, aside h2, aside h3, aside h4, aside h5, aside h6 {
     font-weight: bold;
   }
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/jouni_000\/Projektit\/omavoiman-kotisivut\/sass\/_typography\.scss}line{font-family:\0000385}}
+li p {
+  margin: 0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/jouni_000\/Projektit\/omavoiman-kotisivut\/sass\/_typography\.scss}line{font-family:\0000389}}
+td, th {
+  padding-right: 0.5em;
+}
+
 @media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/jouni_000\/Projektit\/omavoiman-kotisivut\/sass\/_eyecandy\.scss}line{font-family:\000036}}
 .block {
   background-color: white;

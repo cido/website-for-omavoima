@@ -22,7 +22,7 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum..
 Jotain muuta
 ------------
 
-![](images/kids-670.jpg)
+![Kuva lapsista](kuvat/kids-555.jpg)
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua.
