@@ -507,15 +507,9 @@ nav ul li {
 .news-item:hover {
   background-color: #f7f7f7;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/jouni_000\/Projektit\/omavoiman-kotisivut\/sass\/_news\.scss}line{font-family:\0000321}}
-.news-item .excerpt {
-  color: gray;
-  font-size: 0.9em;
-  font-style: italic;
-}
 
 @media screen and (min-width: 450px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/jouni_000\/Projektit\/omavoiman-kotisivut\/sass\/_news\.scss}line{font-family:\0000331}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/jouni_000\/Projektit\/omavoiman-kotisivut\/sass\/_news\.scss}line{font-family:\0000329}}
   .news-list {
     padding: 0 1em;
   }
@@ -597,34 +591,41 @@ h6 {
   text-decoration: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/jouni_000\/Projektit\/omavoiman-kotisivut\/sass\/_typography\.scss}line{font-family:\0000360}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/jouni_000\/Projektit\/omavoiman-kotisivut\/sass\/_typography\.scss}line{font-family:\0000359}}
+.excerpt-style, .news-item .excerpt, .subheader {
+  color: gray;
+  font-size: 0.9em;
+  font-style: italic;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/jouni_000\/Projektit\/omavoiman-kotisivut\/sass\/_typography\.scss}line{font-family:\0000365}}
 #main-content h1, #main-content h2, #main-content h3, #main-content h4, #main-content h5, #main-content h6 {
   font-weight: bold;
   margin-top: 2em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/jouni_000\/Projektit\/omavoiman-kotisivut\/sass\/_typography\.scss}line{font-family:\0000364}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/jouni_000\/Projektit\/omavoiman-kotisivut\/sass\/_typography\.scss}line{font-family:\0000369}}
 #main-content h1:first-child, #main-content h2:first-child, #main-content h3:first-child, #main-content h4:first-child, #main-content h5:first-child, #main-content h6:first-child {
   margin-top: 1em;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/jouni_000\/Projektit\/omavoiman-kotisivut\/sass\/_typography\.scss}line{font-family:\0000369}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/jouni_000\/Projektit\/omavoiman-kotisivut\/sass\/_typography\.scss}line{font-family:\0000374}}
 aside h1, aside h2, aside h3, aside h4, aside h5, aside h6 {
   font-weight: bold;
   margin-bottom: 1em;
 }
 
 @media screen and (min-width: 450px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/jouni_000\/Projektit\/omavoiman-kotisivut\/sass\/_typography\.scss}line{font-family:\0000380}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/jouni_000\/Projektit\/omavoiman-kotisivut\/sass\/_typography\.scss}line{font-family:\0000385}}
   nav {
     font-weight: bold;
   }
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/jouni_000\/Projektit\/omavoiman-kotisivut\/sass\/_typography\.scss}line{font-family:\0000385}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/jouni_000\/Projektit\/omavoiman-kotisivut\/sass\/_typography\.scss}line{font-family:\0000394}}
 li p {
   margin: 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/jouni_000\/Projektit\/omavoiman-kotisivut\/sass\/_typography\.scss}line{font-family:\0000389}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/jouni_000\/Projektit\/omavoiman-kotisivut\/sass\/_typography\.scss}line{font-family:\0000398}}
 td, th {
   padding-right: 0.5em;
 }

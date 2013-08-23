@@ -70,7 +70,15 @@
     	        <section class="block with-padding waterdrop-top-right waterdrop-bottom-left">
 
                     {% if page.automaattinen_otsikon_lisays != false %}
+
                         <h1>{{ page.otsikko }}</h1>
+
+                        {% if page.date %}
+                            <p class="subheader">
+                                {{ page.date | date: "%d.%m.%Y" }}
+                            </p>
+                        {% endif %}
+
                     {% endif %}
 
                     {{ content }}

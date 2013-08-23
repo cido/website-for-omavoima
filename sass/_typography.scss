@@ -56,6 +56,11 @@ h6 { font-size: 1.1em }
 		text-decoration: none;
 	}
 }
+.excerpt-style { // to be extended
+	color: gray;
+	font-size: 0.9em;
+	font-style: italic;
+}
 
 #main-content { #{headers()} {
 	@extend .header-style;
@@ -80,6 +85,10 @@ nav {
 	nav {
 		font-weight: bold;
 	}
+}
+
+.subheader {
+	@extend .excerpt-style;
 }
 
 li p {

@@ -19,9 +19,7 @@
 	}
 
 	.excerpt {
-		color: gray;
-		font-size: 0.9em;
-		font-style: italic;
+		@extend .excerpt-style;
 	}
 
 }
