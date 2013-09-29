@@ -3,9 +3,8 @@
 <!--[if (gt IEMobile 7)|!(IEMobile)]><!--> <html class="no-js"> <!--<![endif]-->
 
 {% capture show_sidebar %}
-    {% if page.layout != "uutisten_etusivu" and page.layout != "uutinen" %}
-        {{ "show-sidebar" }}
-    {% endif %}
+    {% comment %} add if clause here in the future if you want to {% endcomment %}
+    {{ "show-sidebar" }}
 {% endcapture %}
 
     <head>
