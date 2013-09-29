@@ -34,6 +34,14 @@ header.block {
 			@include box-shadow(0 0 3px 2px $block-border-color);
 		}
 	}
+	aside {
+		.block {
+			&.with-padding {
+				padding-left: 1em;
+				padding-right: 1em;
+			}
+		}
+	}
 }
 
 .partners {
@@ -41,17 +49,29 @@ header.block {
 	a {
 		text-decoration: none;
 	}
-	img {
-		border: 1px solid transparent;
-		&:hover {
-			border-color: $deep-red-color;
-		}
-	}
 	#ray {
 		margin-bottom: 6px;
 	}
 	#omapolku {
 		margin-bottom: 8px;
+	}
+}
+
+.brochure {
+	background-image: image-url('printer.png');
+	background-repeat: no-repeat;
+	background-position: bottom right;
+	img {
+		box-shadow: 1px 1px 2px #888888;
+	}
+}
+
+.partners, .brochure {
+	a img {
+		border: 1px solid transparent;
+		&:hover {
+			border-color: $deep-red-color;
+		}
 	}
 }
 
