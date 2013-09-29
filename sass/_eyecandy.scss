@@ -36,6 +36,25 @@ header.block {
 	}
 }
 
+.partners {
+	text-align: center;
+	a {
+		text-decoration: none;
+	}
+	img {
+		border: 1px solid transparent;
+		&:hover {
+			border-color: $deep-red-color;
+		}
+	}
+	#ray {
+		margin-bottom: 6px;
+	}
+	#omapolku {
+		margin-bottom: 8px;
+	}
+}
+
 // WATERDROP CORNERS ===============================
 
 .waterdrop-top-left     { @include border-top-left-radius($waterdrop-rounding-size); }
