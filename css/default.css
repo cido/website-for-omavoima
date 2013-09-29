@@ -671,46 +671,47 @@ header.block {
 
 @media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/jouni_000\/Projektit\/omavoiman-kotisivut\/sass\/_eyecandy\.scss}line{font-family:\0000360}}
 .brochure {
-  background-image: url('../image-assets/printer.png?1380482428');
+  background-image: url('../image-assets/printer.png?1380484451');
   background-repeat: no-repeat;
   background-position: bottom right;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/jouni_000\/Projektit\/omavoiman-kotisivut\/sass\/_eyecandy\.scss}line{font-family:\0000364}}
 .brochure img {
+  max-width: 100%;
   box-shadow: 1px 1px 2px #888888;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/jouni_000\/Projektit\/omavoiman-kotisivut\/sass\/_eyecandy\.scss}line{font-family:\0000370}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/jouni_000\/Projektit\/omavoiman-kotisivut\/sass\/_eyecandy\.scss}line{font-family:\0000371}}
 .partners a img, .brochure a img {
   border: 1px solid transparent;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/jouni_000\/Projektit\/omavoiman-kotisivut\/sass\/_eyecandy\.scss}line{font-family:\0000372}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/jouni_000\/Projektit\/omavoiman-kotisivut\/sass\/_eyecandy\.scss}line{font-family:\0000373}}
 .partners a img:hover, .brochure a img:hover {
   border-color: #952230;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/jouni_000\/Projektit\/omavoiman-kotisivut\/sass\/_eyecandy\.scss}line{font-family:\0000380}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/jouni_000\/Projektit\/omavoiman-kotisivut\/sass\/_eyecandy\.scss}line{font-family:\0000381}}
 .waterdrop-top-left {
   -moz-border-radius-topleft: 0.7em;
   -webkit-border-top-left-radius: 0.7em;
   border-top-left-radius: 0.7em;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/jouni_000\/Projektit\/omavoiman-kotisivut\/sass\/_eyecandy\.scss}line{font-family:\0000381}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/jouni_000\/Projektit\/omavoiman-kotisivut\/sass\/_eyecandy\.scss}line{font-family:\0000382}}
 .waterdrop-top-right {
   -moz-border-radius-topright: 0.7em;
   -webkit-border-top-right-radius: 0.7em;
   border-top-right-radius: 0.7em;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/jouni_000\/Projektit\/omavoiman-kotisivut\/sass\/_eyecandy\.scss}line{font-family:\0000382}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/jouni_000\/Projektit\/omavoiman-kotisivut\/sass\/_eyecandy\.scss}line{font-family:\0000383}}
 .waterdrop-bottom-left {
   -moz-border-radius-bottomleft: 0.7em;
   -webkit-border-bottom-left-radius: 0.7em;
   border-bottom-left-radius: 0.7em;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/jouni_000\/Projektit\/omavoiman-kotisivut\/sass\/_eyecandy\.scss}line{font-family:\0000383}}
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/jouni_000\/Projektit\/omavoiman-kotisivut\/sass\/_eyecandy\.scss}line{font-family:\0000384}}
 .waterdrop-bottom-right {
   -moz-border-radius-bottomright: 0.7em;
   -webkit-border-bottom-right-radius: 0.7em;
