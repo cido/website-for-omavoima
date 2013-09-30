@@ -27,6 +27,14 @@
 				!! document.createElementNS ('http://www.w3.org/2000/svg', "svg").createSVGRect;
 		},
 
+		_toCamelCase: function (str) {
+			return str.replace(/(\-[a-z])/g, function($1){return $1.toUpperCase().replace('-','');});
+		},
+
+		_capitaliseFirstLetter: function(str) {
+			return str.charAt(0).toUpperCase() + str.slice(1);
+		},
+
 		// Adapted from http://www.sitepoint.com/detect-css3-property-browser-support/
 		_detectCssSupportFor: function (cssPropertyWithDashes) {
 			var cssProperty1 = this._toCamelCase(cssPropertyWithDashes);
